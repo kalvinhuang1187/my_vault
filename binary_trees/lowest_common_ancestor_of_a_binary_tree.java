@@ -1,3 +1,4 @@
+/*
 236. Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
 According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between
@@ -13,6 +14,7 @@ a node to be a descendant of itself).”
          7   4
 For example, the lowest common ancestor (LCA) of nodes 5 and 1 is 3. Another example is LCA of 
 nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
+*/
 
 /**
  * Definition for a binary tree node.

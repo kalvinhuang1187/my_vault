@@ -1,3 +1,4 @@
+/*
 Given a n-ary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
         _______3______
@@ -7,6 +8,7 @@ Given a n-ary tree, find the lowest common ancestor (LCA) of two given nodes in 
    6       2       0   4   8
 For example, the lowest common ancestor (LCA) of nodes 5 and 1 is 3. Another example is LCA of 
 nodes 5 and 4 is 3
+*/
 
 Node LCA(Node root, Node a, Node b) { 
     if(a == root || b == root)
