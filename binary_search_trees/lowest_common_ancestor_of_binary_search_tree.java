@@ -6,15 +6,16 @@ Given a binary search tree (BST), find the lowest common ancestor (LCA) of two g
 According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two 
 nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to
 be a descendant of itself).”
-        _______3______
+        _______10______
        /              \
-    ___5__          ___1__
+    ___6__          ___18__
    /      \        /      \
-   6      _2       0       8
-         /  \
-         7   4
-For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6.
-Another example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself
+  4        8      15       21
+    \
+     5 
+
+For example, the lowest common ancestor (LCA) of nodes 4 and 18 is 10.
+Another example is LCA of nodes 5 and 6 is 6, since a node can be a descendant of itself
 */
 
 /**
