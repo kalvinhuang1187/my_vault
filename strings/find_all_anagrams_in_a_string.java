@@ -37,10 +37,10 @@
 import java.util.*;
 
 public class findAnagram {
-	// Time Complexity: O(n)
-	
-	// Sliding window solution to finding anagram
-	public static List<Integer> findAllAnagrams(String s, String p) {
+    // Time Complexity: O(n)
+
+    // Sliding window solution to finding anagram
+    public static List<Integer> findAllAnagrams(String s, String p) {
         List<Integer> res = new ArrayList<Integer>();
         
         if(s == null || p == null || s.length() == 0 || p.length() == 0) {
@@ -60,7 +60,7 @@ public class findAnagram {
          * If char only appears in str2, anagram array will set that position to -1.
          * If char appears in both, the +/- will negate and be 0.
          * ex: str1="abc" str2="abc"=> all char are the same: [0 0 0 0 ...] 
-         * ex: str1="ab" str2="ad"	=> 'b' appears in str1 (+1), 'c' appears in str2 (-1): [0 1 0 -1 ...]
+         * ex: str1="ab" str2="ad"  => 'b' appears in str1 (+1), 'c' appears in str2 (-1): [0 1 0 -1 ...]
         */
         for(int i = 0; i < len2; i++) {
             anagram[s.charAt(i)]++;
@@ -88,9 +88,9 @@ public class findAnagram {
             
             if(c1 == c2) continue;	// if new char in rolling window matches, skip this iteration
             
-            anagram[c1]++;	//new char hasn't been seen before (+1)
-            anagram[c2]--;	//remove oldest char from rolling window (-1)
-            if(anagram[c1] == 1) diff++;	//new char appeared, 2 str are even further apart (more diffs)
+            anagram[c1]++;  //new char hasn't been seen before (+1)
+            anagram[c2]--;  //remove oldest char from rolling window (-1)
+            if(anagram[c1] == 1) diff++;      //new char appeared, 2 str are even further apart (more diffs)
             else if(anagram[c1] == 0) diff--; //new char is one from str2 anagram, getting closer (less diff)
             
             /* for debugging to see anagram char array
@@ -99,10 +99,10 @@ public class findAnagram {
             }
             */
             
-            if(anagram[c2] == -1) diff++;	//oldest char was one from str2, further apart now (more diffs)
+            if(anagram[c2] == -1) diff++;     //oldest char was one from str2, further apart now (more diffs)
             else if(anagram[c2] == 0) diff--; //oldest char wasn't originally from str2, when it first came
-            								  //  in, it got a +1, but it is leaving window now so we are   
-            								  //  getting closer with 1 less mismatch (less diff)
+                                              //  in, it got a +1, but it is leaving window now so we are   
+                                              //  getting closer with 1 less mismatch (less diff)
             
             //System.out.println("diff:" + diff);	//for debugging and seeing diff count
         }
@@ -113,11 +113,11 @@ public class findAnagram {
         return res;
     }
 	
-	public static void main(String args[]) {
-		String s1 = "1badefbacg";
-		String s2 = "abc";
-		List<Integer> output = findAllAnagrams(s1, s2);
+    public static void main(String args[]) {
+        String s1 = "1badefbacg";
+        String s2 = "abc";
+        List<Integer> output = findAllAnagrams(s1, s2);
 		
-		System.out.print(output);
-	}
+        System.out.print(output);
+    }
 }

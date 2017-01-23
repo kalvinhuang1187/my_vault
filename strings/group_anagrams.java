@@ -8,9 +8,9 @@ Return:
 
 [
   ["ate", "eat","tea"],
-    ["nat","tan"],
-      ["bat"]
-      ]
+  ["nat","tan"],
+  ["bat"]
+]
 Note: All inputs will be in lower-case.
  */
 
