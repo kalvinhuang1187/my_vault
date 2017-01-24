@@ -1,8 +1,6 @@
 /*
 160. Intersection of Two Linked Lists
-
 ---
-
 Write a program to find the node at which the intersection of two singly linked lists begins.
 
 For example, the following two linked lists:
@@ -13,10 +11,8 @@ For example, the following two linked lists:
                          ↗            
     B:     b1 → b2 → b3
 begin to intersect at node c1.
-
-
+---
 Notes:
-
 If the two linked lists have no intersection at all, return null.
 The linked lists must retain their original structure after the function returns.
 You may assume there are no cycles anywhere in the entire linked structure.
@@ -50,7 +46,7 @@ public class Solution {
         // In the first iteration, we will reset the pointer of one linkedlist to the head of another linkedlist after it reaches the tail node
         // In the second iteration, we will move two pointers until they points to the same node
         // So if two linkedlist intersects, the meeting point in second iteration must be the intersection point. 
-        //    If the two linked lists have no intersection at all, then the meeting pointer in second iteration must be the tail node of both lists, which is null
+        // If the two linked lists have no intersection at all, then the meeting pointer in second iteration must be the tail node of both lists, which is null
         while (a != b) {
             if (a != null)
                 a = a.next;

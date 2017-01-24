@@ -34,6 +34,7 @@ public class BinaryTree {
             return;
         
         // only add 1 value from each level to result    
+        //   if right-most node has been found, the bucket for this level will be filled and level != result.size()
         if (level == result.size())
             result.add(node.val);
         
