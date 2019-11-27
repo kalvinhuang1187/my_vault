@@ -34,15 +34,15 @@ class Node {
 }
 
 public class LRUCache {
-    HashMap<Integer, Node> hm;
-    int capac;
-    Node head;
-    Node tail;
+    private HashMap<Integer, Node> hm = new HashMap<>();
+    private int capac;
+    private Node head;
+    private Node tail;
     
     // constructor to set up cache capacity, empty hashmap and doubly linked list head and tail
     public LRUCache(int capacity) {
-        this.capac = capacity;
-      hm = new HashMap<>();
+      this.capac = capacity;
+
       head = new Node(0, 0);
       tail = new Node(0, 0);
       head.next = tail;
@@ -59,9 +59,10 @@ public class LRUCache {
     
     // add a node to head of doubly linked list
     private void addToHead(Node node) {
-        node.next = head.next;
-        node.next.prev = node;
         node.prev = head;
+        node.next = head.next;
+
+        head.next.prev = node;
         head.next = node;
     }
     
